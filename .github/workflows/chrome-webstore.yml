@@ -1,0 +1,17 @@
+on:
+  push:
+    branches:
+      - main
+jobs:
+  Push-To-Chrome-Web-Store:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Chrome Extension upload & publish
+        uses: Passiverecords/chrome-extension-upload-action@1.4.1
+        with:
+          refresh-token: '1//04YgGL9sQC6PFCgYIARAAGAQSNwF-L9IrlEKvhlZvGypUxAWkWRU_BxzFKHHYToJAs1cmPqqHZAk8I6WmPZmR6FeooR1W1EealYs'
+          client-id: 'xxxxxxxxxxxxx'
+          client-secret: 'xxxxxxxxxxxx'
+          file-name: './extension.zip'
+          app-id: 'dbjblgkonedcjbodhheckehfknlpdlbi'
+          publish: true
